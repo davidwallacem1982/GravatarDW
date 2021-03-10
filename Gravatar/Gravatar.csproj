@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>GravatarDw</PackageId>
+    <Version>1.0.0</Version>
+    <icon>https://www.gravatar.com/avatar/a042db3d80d46a527f8ba1605a74be57</icon>
+    <License>MIT</License>
+    <Authors>David Wallace Marques Ferreira</Authors>
+    <Company>dw.io</Company>
+    <PackageDescription>Extension for Gravatar</PackageDescription>
+    <Description>Extension for Gravatar</Description>
+    <RepositoryUrl>https://github.com/davidwallacem1982/GravatarDW</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/davidwallacem1982/GravatarDW</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Gravatar</PackageTags>
+    <Title>Gravatar Extensions</Title>
+    <Summary>Extension for Gravatar</Summary>
+  </PropertyGroup>
+</Project>
