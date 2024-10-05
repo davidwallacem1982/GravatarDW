@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
 namespace Gravatar
@@ -8,18 +7,21 @@ namespace Gravatar
     {
         public static string ToGravatar(this string email, int size = 50)
         {
-            if(string.IsNullOrEmpty(email)){
+            if (string.IsNullOrWhiteSpace(email) || !email.Contains("@"))
+            {
                 return string.Empty;
             }
 
-            using var md5 = MD5.Create();
+            // Normalizando o e-mail
+            email = email.Trim().ToLower();
 
+            using var md5 = MD5.Create();
             var inputBytes = Encoding.ASCII.GetBytes(email);
             var hashBytes = md5.ComputeHash(inputBytes);
 
             var sb = new StringBuilder();
-
-            foreach(var t in hashBytes){
+            foreach (var t in hashBytes)
+            {
                 sb.Append(t.ToString("X2"));
             }
 
